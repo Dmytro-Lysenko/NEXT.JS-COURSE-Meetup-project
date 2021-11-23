@@ -1,13 +1,14 @@
 import { MongoClient } from "mongodb";
 
-// api/new-meetup;
+// /api/new-meetup
+// POST /api/new-meetup
 
-async function handler(res, req) {
+async function handler(req, res) {
   if (req.method === "POST") {
     const data = req.body;
 
     const client = await MongoClient.connect(
-      "mongodb+srv://Dmytro:hello1234567@cluster0.typrr.mongodb.net/meetups?retryWrites=true&w=majority"
+      "mongodb+srv://Dmytro:Hello1234567@cluster0.typrr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     );
     const db = client.db();
 
@@ -19,7 +20,7 @@ async function handler(res, req) {
 
     client.close();
 
-    res.status(201).json({ message: "Meetup inserted" });
+    res.status(201).json({ message: "Meetup inserted!" });
   }
 }
 
