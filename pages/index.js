@@ -2,7 +2,7 @@
 
 import MeetupList from "../components/meetups/MeetupList";
 
-const DUMMY_MEEtUPS = [
+const DUMMY_MEETUPS = [
   {
     id: "m1",
     title: "A first meet up",
@@ -32,7 +32,7 @@ const DUMMY_MEEtUPS = [
 ];
 
 const HomePage = () => {
-  return <MeetupList meetups={DUMMY_MEEtUPS} />;
+  return <MeetupList meetups={DUMMY_MEETUPS} />;
 };
 
 export default HomePage;
